@@ -57,7 +57,7 @@ Matrix Matrix::operator*(const Matrix &rhs) const
 // Set a value in matrix
 void Matrix::set_value(std::size_t i, std::size_t j, int n)
 {
-    if (i >= size || j >= size)
+    if (i >= size || j >= size || i < 0 || j < 0)
     {
         throw std::out_of_range("[Index is Out of Bounds]");
     }
@@ -67,7 +67,7 @@ void Matrix::set_value(std::size_t i, std::size_t j, int n)
 // Return a value in matrix
 int Matrix::get_value(std::size_t i, std::size_t j) const
 {
-    if (i >= size || j >= size)
+    if (i >= size || j >= size  || i < 0 || j < 0)
     {
         throw std::out_of_range("[Index is Out of Bounds]");
     }
@@ -105,7 +105,7 @@ int Matrix::sum_diagonal_minor() const
 // Swap rows of matrix
 void Matrix::swap_rows(std::size_t r1, std::size_t r2)
 {
-    if (r1 >= size || r2 >= size)
+    if (r1 >= size || r2 >= size || r1 < 0 || r2 < 0)
     {
         throw std::out_of_range("[Index is Out of Bounds]");
     }
@@ -115,7 +115,7 @@ void Matrix::swap_rows(std::size_t r1, std::size_t r2)
 // Swap columns of matrix
 void Matrix::swap_cols(std::size_t c1, std::size_t c2)
 {
-    if (c1 >= size || c2 >= size)
+    if (c1 >= size || c2 >= size || c1 < 0 || c2 < 0)
     {
         throw std::out_of_range("[Index is Out of Bounds]");
     }
