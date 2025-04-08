@@ -173,7 +173,7 @@ void Matrix<T>::print_matrix() const
     {
         for (int j = 0; j < size; j++)
         {
-            std::cout << std::setw(4) << matrix[i][j] << " ";
+            std::cout << std::setw(6) << matrix[i][j] << " ";
         }
 
         std::cout << std::endl;
